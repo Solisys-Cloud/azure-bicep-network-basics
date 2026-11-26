@@ -1,0 +1,3 @@
+# Compiled ARM templates (generated with az bicep build)
+*.json
+!.github/**/*.json

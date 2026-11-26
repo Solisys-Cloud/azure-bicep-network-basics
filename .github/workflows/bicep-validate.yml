@@ -1,0 +1,26 @@
+name: Bicep validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Bicep
+        run: az bicep install
+
+      - name: Lint
+        run: az bicep lint --file main.bicep
+
+      - name: Build template and parameters
+        run: |
+          az bicep build --file main.bicep --stdout > /dev/null
+          az bicep build-params --file main.bicepparam --stdout > /dev/null
