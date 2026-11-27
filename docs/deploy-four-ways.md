@@ -2,6 +2,8 @@
 
 [Back to the README](../README.md) · Blog article: [One Bicep File, Four Ways to Deploy It](https://www.solisys.be/blog/deploy-bicep-four-ways/)
 
+![One Bicep file, four ways to deploy it](images/four-ways-overview.png)
+
 The same Bicep template, deployed four different ways. The example used throughout is this repository: one resource group, one virtual network, two subnets and two NSGs (Network Security Groups), deployed at subscription scope.
 
 | # | Tool | Best for |
